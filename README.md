@@ -33,7 +33,7 @@ So with a solid 6 hours down the drain a week before my exams.
 
 I present to you
 
-## Enigma
+### Enigma
 
 I'm not going to redo the UI, this was just a placeholder so I could see my work but I can't be bothered.
 
