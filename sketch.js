@@ -63,7 +63,7 @@ function setup() {
 	for (let i = 0; i < letters.length; i++) {
 		const xMult = width / 13;
 		let lightX = i <= 12 ? i * xMult + 75 : (i - 13) * xMult + 75;
-		let lightY = i <= 12 ? 150 : 250;
+		let lightY = i <= 12 ? 150 : 250; // how to copy from code bullet 101
 
 		lights[lights.length] = new Light(lightX, lightY, letters[i]);
 
@@ -95,7 +95,7 @@ function draw() {
 	background(0);
 	noStroke();
 
-	for (let i of lights) {
+	for (let i of lights) { // isn't this feature p much depracated? Just use for each u idiot.
 		i.show();
 	}
 
