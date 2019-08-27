@@ -24,7 +24,8 @@ class Light {
 			fill(50);
 		} else {
 			fill(0);
-		}
+    }
+    fill(255);
 		textSize(60);
 		textAlign(CENTER);
 		text(this.letter, this.x, this.y + 15);
