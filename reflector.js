@@ -1,6 +1,6 @@
 class Reflector {
   constructor() {
-    this.rotor = [
+    this.pairs = [
       ["a", "y"],
       ["b", "r"],
       ["c", "u"],
@@ -18,10 +18,10 @@ class Reflector {
   }
   
   reflect(letter) {
-    for (let i = 0; i < this.rotor.length; i++) {
+    for (let i = 0; i < this.pairs.length; i++) {
       for (let j = 0; j < 2; j++) {
-        if (letter === this.rotor[i][j]) {
-          return (j === 1) ? this.rotor[i][0] : this.rotor[i][1];
+        if (letter === this.pairs[i][j]) {
+          return (j === 1) ? this.pairs[i][0] : this.pairs[i][1];
         }
       }
     }

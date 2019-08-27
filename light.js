@@ -7,16 +7,16 @@ class Light {
 	}
 
 	show() {
-		let activeColour = color(252, 238, 83);
+		let onColor = color(252, 238, 83);
 
 		if (!this.on) {
 			fill(29, 167, 234);
 			ellipse(this.x, this.y, 75, 75);
 		} else {
-			fill(activeColour);
+			fill(onColor);
 			ellipse(this.x, this.y, 75, 75);
-			activeColour.setAlpha(128);
-			fill(activeColour);
+			onColor.setAlpha(128);
+			fill(onColor);
 			ellipse(this.x, this.y, 100, 100);
 		}
 
@@ -27,6 +27,6 @@ class Light {
 		}
 		textSize(60);
 		textAlign(CENTER);
-		text(this.letter, this.x, this.y + 19);
+		text(this.letter, this.x, this.y + 15);
 	}
 }

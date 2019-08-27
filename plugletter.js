@@ -3,18 +3,18 @@ class PlugLetter {
     this.letter = letter;
     this.x = x;
     this.y = y;
-    this.hasWire = false;
+    this.itHaveWire = false;
     this.wireForTrack = false;
   }
   
-  connect(notThatPlug) { 
-    this.hasWire = true;
-    this.connectedPlug = notThatPlug;
-    plugBoard.reassign(this.letter, notThatPlug.letter);
+  connect(otherPlug) { 
+    this.itHaveWire = true;
+    this.connectedPlug = otherPlug;
+    plugBoard.reassign(this.letter, otherPlug.letter);
   }
   
   disconnect() {
-    this.hasWire = false;
+    this.itHaveWire = false;
     if (this.connectedPlug !== undefined) {
       this.connectedPlug.connectedPlug = undefined;
       this.connectedPlug.disconnect();
@@ -32,7 +32,7 @@ class PlugLetter {
     textAlign(RIGHT);
     text(this.letter, this.x - 10, this.y + 5);
     
-    if (this.hasWire) {
+    if (this.itHaveWire) {
       stroke(66, 135, 245);
       line(this.x, this.y, this.connectedPlug.x, this.connectedPlug.y);
     } else if (this.wireForTrack) {
