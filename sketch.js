@@ -42,8 +42,8 @@ let plugLetters = [];
 let activePlugLetter;
 
 const rotor1Start = 0,
-rotor2Start = 0,
-rotor3Start = 0;
+	rotor2Start = 0,
+	rotor3Start = 0;
 
 let keyIsPressed = false;
 let mouseCount = 0;
@@ -63,7 +63,7 @@ function setup() {
 	// create lights & plug letters
 	for (let i = 0; i < letters.length; i++) {
 		const xMult = width / 13;
-		let lightX = i <= 12 ? i * xMult + 75 : (i - 13) * xMult + 75;
+		let lightX = i <= 12 ? i * xMult + 60 : (i - 13) * xMult + 60;
 		let lightY = i <= 12 ? 150 : 250;
 
 		lights[lights.length] = new Light(lightX, lightY, letters[i]);
@@ -95,15 +95,15 @@ function draw() {
 	}
 
 	let rotorText =
-		"Rotor 3 Position: " +
+		"Rotor 3: " +
 		(rotor3.position + 1) +
 		" +  -\n" +
 		rotor3.wiring.toString() +
-		"\nRotor 2 Position: " +
+		"\nRotor 2: " +
 		(rotor2.position + 1) +
 		" +  -\n" +
 		rotor2.wiring.toString() +
-		"\nRotor 1 Position: " +
+		"\nRotor 1: " +
 		(rotor1.position + 1) +
 		" +  -\n" +
 		rotor1.wiring.toString();
@@ -116,7 +116,7 @@ function draw() {
 
 	textAlign(CENTER);
 	fill(255);
-	text("MESSAGE:", width * 0.3, height * 0.5);
+	text("Message:", width * 0.3, height * 0.5);
 	fill(0, 255, 0);
 	text(currentMessage, width * 0.5, height * 0.5);
 

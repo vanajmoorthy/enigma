@@ -27,6 +27,6 @@ class Light {
 		}
 		textSize(60);
 		textAlign(CENTER);
-		text(this.letter, this.x, this.y + 15);
+		text(this.letter, this.x, this.y + 19);
 	}
 }
