@@ -113,6 +113,9 @@ function draw() {
 		" +  -\n" +
 		rotor1.wiring.toString();
 
+	textSize(25);
+	text("Show Plugboard", width * 0.9, height * 0.75);
+		
 	textAlign(CENTER);
 	fill(225);
 	textSize(25);
@@ -244,26 +247,30 @@ function mousePressed() {
 	if (mouseX > width * 0.75 && mouseY > 450) {
 		showPlugDrawer = !showPlugDrawer ? true : false;
 		return;
-	} else if (mouseX > 835 && mouseX < 860) {
+	} else if (mouseX > 785 && mouseX < 810) {
 		if (mouseY > 500 && mouseY < 520) {
 			rotor3.shiftPosition();
+			console.log("3+");
 			return;
 		} else if (mouseY > 566 && mouseY < 586) {
 			rotor2.shiftPosition();
 			return;
-		} else if (mouseY > 630 && mouseY < 650) {
+		} else if (mouseY > 620 && mouseY < 640) {
 			rotor1.shiftPosition();
 			return;
 		}
-	} else if (mouseX > 860 && mouseX < 880) {
+	} else if (mouseX > 810 && mouseX < 830) {
 		if (mouseY > 500 && mouseY < 520) {
 			rotor3.downPosition();
+			console.log("3-");
 			return;
 		} else if (mouseY > 566 && mouseY < 586) {
 			rotor2.downPosition();
+			console.log("2");
 			return;
-		} else if (mouseY > 630 && mouseY < 650) {
+		} else if (mouseY > 620 && mouseY < 640) {
 			rotor1.downPosition();
+			console.log("1");
 			return;
 		}
 	}
