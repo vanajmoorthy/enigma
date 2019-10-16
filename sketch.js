@@ -268,7 +268,7 @@ function mousePressed() {
 			rotor2.downPosition();
 			console.log("2");
 			return;
-		} else if (mouseY > 620 && mouseY < 640) {
+		} else if (mouseY > 625 && mouseY < 645) {
 			rotor1.downPosition();
 			console.log("1");
 			return;
